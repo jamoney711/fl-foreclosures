@@ -1,0 +1,38 @@
+name: FL Foreclosures Scrape
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 11 * * 5'
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: playwright install chromium
+      - run: sudo apt-get install -y libnss3 libnspr4 libdbus-1-3 libatk1.0-0t64 libatk-bridge2.0-0t64 libcups2t64 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2t64 libpango-1.0-0 libcairo2 libatspi2.0-0t64
+      - run: python scraper/run_pipeline.py
+        env:
+          PYTHONUNBUFFERED: "1"
+      - run: cp data/dashboard_data.json dashboard/dashboard_data.json || true
+      - name: Commit and push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/ dashboard/
+          git diff --staged --quiet || git commit -m "FL scrape $(date +'%Y-%m-%d')"
+          git push
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dashboard
+          publish_branch: gh-pages
