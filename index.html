@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FL Foreclosures — Diamond Home Buyers Intel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0a0c10; --surface:#111318; --surface2:#181c24;
+    --border:rgba(255,255,255,0.07);
+    --accent:#37c2ff; --accent2:#ff6b35;
+    --green:#3de68a; --red:#ff4b4b; --orange:#ff9d42; --blue:#4b8fff;
+    --muted:rgba(255,255,255,0.4); --text:rgba(255,255,255,0.9);
+    --font-display:'Syne',sans-serif; --font-mono:'DM Mono',monospace; --font-body:'Inter',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:var(--font-body);min-height:100vh;font-size:14px}
+  .header{background:var(--surface);border-bottom:1px solid var(--border);padding:18px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(20px)}
+  .header-left{display:flex;align-items:center;gap:14px}
+  .logo-diamond{width:34px;height:34px;background:var(--accent);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);flex-shrink:0}
+  .header-title{font-family:var(--font-display);font-weight:800;font-size:18px;letter-spacing:-0.3px}
+  .header-sub{font-family:var(--font-mono);font-size:11px;color:var(--muted);margin-top:1px}
+  .header-meta{display:flex;align-items:center;gap:20px}
+  .last-updated{font-family:var(--font-mono);font-size:11px;color:var(--muted)}
+  .last-updated span{color:var(--accent)}
+  .refresh-btn,.export-btn{background:transparent;border:1px solid var(--border);color:var(--muted);font-family:var(--font-mono);font-size:11px;padding:6px 14px;cursor:pointer;letter-spacing:0.5px;transition:all .2s;border-radius:4px}
+  .refresh-btn:hover{border-color:var(--accent);color:var(--accent)}
+  .export-btn:hover{border-color:var(--green);color:var(--green)}
+  .layout{display:grid;grid-template-columns:280px 1fr;min-height:calc(100vh - 65px)}
+  .sidebar{background:var(--surface);border-right:1px solid var(--border);padding:20px 0;overflow-y:auto;position:sticky;top:65px;height:calc(100vh - 65px)}
+  .sidebar-section{padding:0 16px 16px;margin-bottom:4px}
+  .sidebar-label{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;padding:0 4px}
+  .filter-group{display:flex;flex-direction:column;gap:2px}
+  .filter-item{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;cursor:pointer;border-radius:6px;transition:background .15s;user-select:none}
+  .filter-item:hover{background:var(--surface2)}
+  .filter-item.active{background:rgba(55,194,255,0.1)}
+  .filter-item-label{font-size:13px;color:var(--text)}
+  .filter-item.active .filter-item-label{color:var(--accent)}
+  .filter-count{font-family:var(--font-mono);font-size:11px;background:var(--surface2);color:var(--muted);padding:2px 7px;border-radius:20px;min-width:28px;text-align:center}
+  .filter-item.active .filter-count{background:rgba(55,194,255,0.15);color:var(--accent)}
+  .search-box,.date-input{width:100%;background:var(--surface2);border:1px solid var(--border);color:var(--text);font-family:var(--font-body);font-size:13px;padding:9px 12px;outline:none;border-radius:6px;transition:border-color .2s}
+  .date-input{font-family:var(--font-mono);font-size:12px}
+  .search-box::placeholder{color:var(--muted)}
+  .search-box:focus,.date-input:focus{border-color:rgba(55,194,255,0.4)}
+  .date-inputs{display:flex;flex-direction:column;gap:6px}
+  .date-label{font-size:11px;color:var(--muted);margin-bottom:2px}
+  .clear-btn{width:100%;padding:9px 12px;background:transparent;border:1px solid var(--border);color:var(--muted);font-family:var(--font-mono);font-size:11px;cursor:pointer;letter-spacing:.5px;transition:all .2s;border-radius:6px}
+  .clear-btn:hover{border-color:var(--accent2);color:var(--accent2)}
+  .sidebar-divider{height:1px;background:var(--border);margin:4px 16px 16px}
+  .main{padding:24px 28px;overflow-y:auto}
+  .stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+  .stat-card{background:var(--surface);border:1px solid var(--border);padding:16px 18px;border-radius:8px}
+  .stat-value{font-family:var(--font-display);font-size:28px;font-weight:800;line-height:1;margin-bottom:4px}
+  .stat-label{font-size:11px;color:var(--muted);letter-spacing:.3px}
+  .stat-card.accent{border-color:rgba(55,194,255,0.25)}
+  .stat-card.accent .stat-value{color:var(--accent)}
+  .stat-card.orange .stat-value{color:var(--orange)}
+  .stat-card.red .stat-value{color:var(--red)}
+  .calendar-bar{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+  .cal-item{background:var(--surface);border:1px solid var(--border);padding:10px 14px;border-radius:6px;cursor:pointer;transition:all .15s;min-width:90px;text-align:center}
+  .cal-item:hover{border-color:rgba(55,194,255,0.3)}
+  .cal-item.active{border-color:var(--accent);background:rgba(55,194,255,0.07)}
+  .cal-item.active .cal-date{color:var(--accent)}
+  .cal-date{font-family:var(--font-display);font-weight:700;font-size:13px;line-height:1.2}
+  .cal-count{font-family:var(--font-mono);font-size:11px;color:var(--muted);margin-top:3px}
+  .table-controls{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+  .results-count{font-family:var(--font-mono);font-size:12px;color:var(--muted)}
+  .results-count strong{color:var(--text)}
+  .sort-controls{display:flex;gap:6px}
+  .sort-btn{background:var(--surface2);border:1px solid var(--border);color:var(--muted);font-family:var(--font-mono);font-size:11px;padding:5px 12px;cursor:pointer;border-radius:4px;transition:all .15s;letter-spacing:.3px}
+  .sort-btn:hover{color:var(--text)}
+  .sort-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(55,194,255,0.07)}
+  .table-wrapper{background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+  table{width:100%;border-collapse:collapse}
+  thead{background:var(--surface2);border-bottom:1px solid var(--border)}
+  th{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;padding:10px 14px;text-align:left;font-weight:500;cursor:pointer;user-select:none;white-space:nowrap}
+  th:hover{color:var(--text)}
+  tbody tr{border-bottom:1px solid var(--border);transition:background .1s;cursor:pointer}
+  tbody tr:last-child{border-bottom:none}
+  tbody tr:hover{background:rgba(255,255,255,0.02)}
+  tbody tr.expanded{background:rgba(55,194,255,0.04)}
+  td{padding:12px 14px;vertical-align:middle}
+  .owner-name{font-weight:600;font-size:13px;color:var(--text)}
+  .case-sub{font-size:11px;color:var(--muted);margin-top:2px;font-family:var(--font-mono)}
+  .address-main{font-size:13px;color:var(--text)}
+  .address-sub{font-size:11px;color:var(--muted);margin-top:2px;font-family:var(--font-mono)}
+  .county-tag{display:inline-block;padding:2px 8px;background:var(--surface2);border-radius:3px;font-family:var(--font-mono);font-size:11px;color:var(--muted)}
+  .auction-date{font-family:var(--font-mono);font-size:12px}
+  .auction-date .time{font-size:10px;color:var(--muted);display:block;margin-top:1px}
+  .days-badge{display:inline-block;padding:2px 8px;border-radius:20px;font-family:var(--font-mono);font-size:11px;margin-top:3px}
+  .days-badge.urgent{background:rgba(255,75,75,0.15);color:var(--red)}
+  .days-badge.soon{background:rgba(255,157,66,0.15);color:var(--orange)}
+  .days-badge.upcoming{background:rgba(75,143,255,0.1);color:var(--blue)}
+  .detail-row{display:none}
+  .detail-row.open{display:table-row}
+  .detail-panel{background:rgba(55,194,255,0.03);border-top:1px solid rgba(55,194,255,0.1);padding:20px 24px}
+  .detail-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px 24px;margin-bottom:16px}
+  .detail-field-label{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:.8px;text-transform:uppercase;margin-bottom:4px}
+  .detail-field-value{font-size:13px;color:var(--text)}
+  .detail-field-value.mono{font-family:var(--font-mono);font-size:12px}
+  .detail-actions{display:flex;gap:8px;margin-top:8px}
+  .action-link{padding:7px 16px;border-radius:4px;font-size:12px;font-family:var(--font-mono);text-decoration:none;transition:all .15s;border:1px solid var(--border);color:var(--muted);background:transparent;cursor:pointer;display:inline-block}
+  .action-link:hover{border-color:var(--accent);color:var(--accent)}
+  .action-link.primary{border-color:var(--accent);color:var(--accent);background:rgba(55,194,255,0.07)}
+  .empty-state{padding:60px 24px;text-align:center;color:var(--muted);font-family:var(--font-mono);font-size:13px}
+  .empty-state .icon{font-size:32px;margin-bottom:12px;opacity:.4}
+  ::-webkit-scrollbar{width:4px;height:4px}
+  ::-webkit-scrollbar-track{background:transparent}
+  ::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:2px}
+  .loading-overlay{position:fixed;inset:0;background:rgba(10,12,16,0.85);display:flex;align-items:center;justify-content:center;z-index:1000;backdrop-filter:blur(4px);transition:opacity .3s}
+  .loading-overlay.hidden{opacity:0;pointer-events:none}
+  .loader{text-align:center}
+  .loader-diamond{width:40px;height:40px;background:var(--accent);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);margin:0 auto 16px;animation:spin 1.5s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .loader-text{font-family:var(--font-mono);font-size:12px;color:var(--muted);letter-spacing:1px}
+  @media (max-width:1100px){.layout{grid-template-columns:240px 1fr}.stats-bar{grid-template-columns:repeat(2,1fr)}.detail-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="loader">
+    <div class="loader-diamond"></div>
+    <div class="loader-text">LOADING FORECLOSURE DATA...</div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="header-left">
+    <div class="logo-diamond"></div>
+    <div>
+      <div class="header-title">FL FORECLOSURES</div>
+      <div class="header-sub">Diamond Home Buyers LLC — Intelligence Dashboard</div>
+    </div>
+  </div>
+  <div class="header-meta">
+    <div class="last-updated" id="lastUpdated">Updated: <span>—</span></div>
+    <button class="export-btn" onclick="exportCSV()">↓ EXPORT CSV</button>
+    <button class="refresh-btn" onclick="loadData()">↺ REFRESH</button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">Search</div>
+      <input type="text" class="search-box" id="searchBox" placeholder="Defendant, address, city, case..." oninput="applyFilters()">
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">County</div>
+      <div class="filter-group" id="countyFilters"></div>
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">City</div>
+      <div class="filter-group" id="cityFilters"></div>
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Auction Date</div>
+      <div class="date-inputs">
+        <div><div class="date-label">From</div><input type="date" class="date-input" id="dateFrom" onchange="applyFilters()"></div>
+        <div><div class="date-label">To</div><input type="date" class="date-input" id="dateTo" onchange="applyFilters()"></div>
+      </div>
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">
+      <button class="clear-btn" onclick="clearAllFilters()">CLEAR ALL FILTERS</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="stats-bar">
+      <div class="stat-card accent"><div class="stat-value" id="statTotal">—</div><div class="stat-label">Total Foreclosures</div></div>
+      <div class="stat-card"><div class="stat-value" id="statCounties">—</div><div class="stat-label">Counties</div></div>
+      <div class="stat-card orange"><div class="stat-value" id="statUpcoming">—</div><div class="stat-label">Auctions This Month</div></div>
+      <div class="stat-card red"><div class="stat-value" id="statUrgent">—</div><div class="stat-label">Auctions ≤ 14 Days</div></div>
+    </div>
+
+    <div class="calendar-bar" id="calendarBar"></div>
+
+    <div class="table-controls">
+      <div class="results-count" id="resultsCount">Loading...</div>
+      <div class="sort-controls">
+        <button class="sort-btn active" onclick="setSort('auction_date')" id="sort-auction_date">AUCTION DATE</button>
+        <button class="sort-btn" onclick="setSort('county')" id="sort-county">COUNTY</button>
+        <button class="sort-btn" onclick="setSort('defendant')" id="sort-defendant">DEFENDANT</button>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th onclick="setSort('defendant')">Defendant</th>
+            <th onclick="setSort('property_address')">Property</th>
+            <th onclick="setSort('county')">County</th>
+            <th onclick="setSort('auction_date')">Auction Date</th>
+            <th onclick="setSort('plaintiff')">Plaintiff</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr><td colspan="5"><div class="empty-state"><div class="icon">◇</div>Loading data...</div></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<script>
+let allRecords=[],filteredRecords=[];
+let activeCounties=new Set(),activeCities=new Set();
+let activeAuctionDate=null;
+let sortField='auction_date',sortDir=1;
+let expandedRows=new Set();
+
+async function loadData(){
+  document.getElementById('loadingOverlay').classList.remove('hidden');
+  try{
+    const res=await fetch('dashboard_data.json?t='+Date.now());
+    if(!res.ok)throw new Error('Failed to load data');
+    const data=await res.json();
+    allRecords=data.records||[];
+    const dt=new Date(data.generated_at);
+    document.querySelector('#lastUpdated span').textContent=dt.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'2-digit',minute:'2-digit'});
+    buildSidebar(data);
+    buildCalendar(data);
+    applyFilters();
+  }catch(e){
+    console.error(e);
+    document.getElementById('tableBody').innerHTML='<tr><td colspan="5"><div class="empty-state"><div class="icon">⚠</div>Could not load data.</div></td></tr>';
+  }finally{
+    document.getElementById('loadingOverlay').classList.add('hidden');
+  }
+}
+
+function buildSidebar(data){
+  const countyEl=document.getElementById('countyFilters');
+  countyEl.innerHTML='';
+  Object.entries(data.county_summary||{}).sort((a,b)=>b[1].count-a[1].count).forEach(([county,info])=>{
+    const div=document.createElement('div');
+    div.className='filter-item';
+    div.id='county-'+county;
+    div.onclick=()=>toggleSet(activeCounties,county,div);
+    div.innerHTML='<span class="filter-item-label">'+esc(county)+'</span><span class="filter-count">'+info.count+'</span>';
+    countyEl.appendChild(div);
+  });
+  const cityEl=document.getElementById('cityFilters');
+  cityEl.innerHTML='';
+  Object.entries(data.city_summary||{}).sort((a,b)=>b[1].count-a[1].count).slice(0,20).forEach(([city,info])=>{
+    const div=document.createElement('div');
+    div.className='filter-item';
+    div.id='city-'+city;
+    div.onclick=()=>toggleSet(activeCities,city,div);
+    div.innerHTML='<span class="filter-item-label">'+esc(city)+'</span><span class="filter-count">'+info.count+'</span>';
+    cityEl.appendChild(div);
+  });
+}
+
+function buildCalendar(data){
+  const bar=document.getElementById('calendarBar');
+  bar.innerHTML='';
+  Object.entries(data.auction_calendar||{}).sort((a,b)=>new Date(a[0])-new Date(b[0])).slice(0,16).forEach(([date,count])=>{
+    const div=document.createElement('div');
+    div.className='cal-item';
+    div.id='cal-'+date;
+    const d=new Date(date);
+    const label=isNaN(d)?date:d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+    div.innerHTML='<div class="cal-date">'+label+'</div><div class="cal-count">'+count+' sales</div>';
+    div.onclick=()=>toggleAuctionDate(date);
+    bar.appendChild(div);
+  });
+}
+
+function toggleSet(set,key,el){
+  if(set.has(key)){set.delete(key);el.classList.remove('active');}
+  else{set.add(key);el.classList.add('active');}
+  applyFilters();
+}
+
+function toggleAuctionDate(date){
+  const el=document.getElementById('cal-'+date);
+  if(activeAuctionDate===date){activeAuctionDate=null;el.classList.remove('active');}
+  else{
+    document.querySelectorAll('.cal-item').forEach(e=>e.classList.remove('active'));
+    activeAuctionDate=date;el.classList.add('active');
+  }
+  applyFilters();
+}
+
+function clearAllFilters(){
+  activeCounties.clear();activeCities.clear();activeAuctionDate=null;
+  document.querySelectorAll('.filter-item.active,.cal-item.active').forEach(el=>el.classList.remove('active'));
+  document.getElementById('searchBox').value='';
+  document.getElementById('dateFrom').value='';
+  document.getElementById('dateTo').value='';
+  applyFilters();
+}
+
+function parseAuctionDate(str){
+  if(!str)return null;
+  const d=new Date(str);
+  return isNaN(d)?null:d;
+}
+
+function applyFilters(){
+  const search=document.getElementById('searchBox').value.toLowerCase();
+  const dateFrom=document.getElementById('dateFrom').value;
+  const dateTo=document.getElementById('dateTo').value;
+  filteredRecords=allRecords.filter(r=>{
+    if(activeCounties.size>0&&!activeCounties.has(r.county))return false;
+    if(activeCities.size>0&&!activeCities.has(r.property_city))return false;
+    if(activeAuctionDate&&r.auction_date!==activeAuctionDate)return false;
+    if(search){
+      const hay=[r.defendant,r.plaintiff,r.property_address,r.property_city,r.county,r.case_number].filter(Boolean).join(' ').toLowerCase();
+      if(!hay.includes(search))return false;
+    }
+    if(dateFrom||dateTo){
+      const d=parseAuctionDate(r.auction_date);
+      if(d){
+        if(dateFrom&&d<new Date(dateFrom))return false;
+        if(dateTo&&d>new Date(dateTo+'T23:59:59'))return false;
+      }
+    }
+    return true;
+  });
+  sortRecords();
+  renderTable();
+  updateStats(filteredRecords);
+  document.getElementById('resultsCount').innerHTML='<strong>'+filteredRecords.length+'</strong> of '+allRecords.length+' records';
+}
+
+function setSort(field){
+  document.querySelectorAll('.sort-btn').forEach(b=>b.classList.remove('active'));
+  const btn=document.getElementById('sort-'+field);
+  if(btn)btn.classList.add('active');
+  if(sortField===field)sortDir*=-1;else{sortField=field;sortDir=1;}
+  sortRecords();renderTable();
+}
+
+function sortRecords(){
+  filteredRecords.sort((a,b)=>{
+    let av=a[sortField],bv=b[sortField];
+    if(sortField==='auction_date'){
+      av=parseAuctionDate(av)||new Date(0);
+      bv=parseAuctionDate(bv)||new Date(0);
+      return (av-bv)*sortDir;
+    }
+    av=String(av||'').toLowerCase();bv=String(bv||'').toLowerCase();
+    return av<bv?-sortDir:av>bv?sortDir:0;
+  });
+}
+
+function getDaysUntil(dateStr){
+  const d=parseAuctionDate(dateStr);
+  if(!d)return null;
+  const now=new Date();now.setHours(0,0,0,0);d.setHours(0,0,0,0);
+  const diff=Math.round((d-now)/86400000);
+  return diff>=0?diff:null;
+}
+
+function renderTable(){
+  const tbody=document.getElementById('tableBody');
+  if(!filteredRecords.length){
+    tbody.innerHTML='<tr><td colspan="5"><div class="empty-state"><div class="icon">◇</div>No records match current filters.</div></td></tr>';
+    return;
+  }
+  tbody.innerHTML='';
+  filteredRecords.forEach((r,i)=>{
+    const days=getDaysUntil(r.auction_date);
+    const tr=document.createElement('tr');
+    tr.id='row-'+i;
+    if(expandedRows.has(i))tr.classList.add('expanded');
+    tr.onclick=()=>toggleExpand(i);
+    tr.innerHTML=
+      '<td><div class="owner-name">'+esc(r.defendant||'Unknown')+'</div><div class="case-sub">'+esc(r.case_number||'')+'</div></td>'+
+      '<td><div class="address-main">'+esc(r.property_address||'—')+'</div><div class="address-sub">'+esc(r.property_city||'')+(r.property_city?', ':'')+'FL '+esc(r.property_zip||'')+'</div></td>'+
+      '<td><span class="county-tag">'+esc(r.county||'—')+'</span></td>'+
+      '<td><div class="auction-date">'+esc(r.auction_date||'—')+'<span class="time">'+esc(r.auction_time||'')+'</span></div>'+
+      (days!==null?'<span class="days-badge '+(days<=7?'urgent':days<=21?'soon':'upcoming')+'">'+(days===0?'TODAY':days+'d')+'</span>':'')+'</td>'+
+      '<td><div class="address-sub">'+esc((r.plaintiff||'—').slice(0,50))+'</div></td>';
+    tbody.appendChild(tr);
+
+    const det=document.createElement('tr');
+    det.className='detail-row'+(expandedRows.has(i)?' open':'');
+    det.id='detail-'+i;
+    det.innerHTML='<td colspan="5">'+renderDetail(r)+'</td>';
+    tbody.appendChild(det);
+  });
+}
+
+function renderDetail(r){
+  const fields=[
+    ['Plaintiff',r.plaintiff],['Case Number',r.case_number],
+    ['Auction Site',r.auction_site],['Newspaper',r.newspaper],
+    ['Published',r.publication_date],['Subcategory',r.subcategory],
+    ['Scraped',r.scraped_date]
+  ];
+  const fieldsHtml=fields.filter(([,v])=>v).map(([l,v])=>
+    '<div><div class="detail-field-label">'+l+'</div><div class="detail-field-value mono">'+esc(String(v))+'</div></div>'
+  ).join('');
+  const fullAddr=[r.property_address,r.property_city,'FL',r.property_zip].filter(Boolean).join(', ');
+  const mapsUrl='https://maps.google.com/?q='+encodeURIComponent(fullAddr);
+  const zillowUrl='https://www.zillow.com/homes/'+encodeURIComponent(fullAddr)+'_rb/';
+  const auctionUrl=r.auction_site?(r.auction_site.startsWith('http')?r.auction_site:'https://'+r.auction_site):'';
+  return '<div class="detail-panel"><div class="detail-grid">'+fieldsHtml+'</div><div class="detail-actions">'+
+    '<a class="action-link primary" href="'+mapsUrl+'" target="_blank" onclick="event.stopPropagation()">📍 Google Maps</a>'+
+    '<a class="action-link" href="'+zillowUrl+'" target="_blank" onclick="event.stopPropagation()">🏠 Zillow</a>'+
+    (auctionUrl?'<a class="action-link" href="'+auctionUrl+'" target="_blank" onclick="event.stopPropagation()">⚖ Auction Site</a>':'')+
+    '</div></div>';
+}
+
+function toggleExpand(i){
+  const det=document.getElementById('detail-'+i);
+  const row=document.getElementById('row-'+i);
+  if(expandedRows.has(i)){expandedRows.delete(i);det.classList.remove('open');row.classList.remove('expanded');}
+  else{expandedRows.add(i);det.classList.add('open');row.classList.add('expanded');}
+}
+
+function updateStats(records){
+  document.getElementById('statTotal').textContent=records.length.toLocaleString();
+  document.getElementById('statCounties').textContent=new Set(records.map(r=>r.county).filter(Boolean)).size;
+  const now=new Date();
+  const eom=new Date(now.getFullYear(),now.getMonth()+1,0);
+  document.getElementById('statUpcoming').textContent=records.filter(r=>{
+    const d=parseAuctionDate(r.auction_date);
+    return d&&d>=now&&d<=eom;
+  }).length;
+  document.getElementById('statUrgent').textContent=records.filter(r=>{
+    const d=getDaysUntil(r.auction_date);
+    return d!==null&&d<=14;
+  }).length;
+}
+
+function exportCSV(){
+  const fields=['county','defendant','plaintiff','case_number','property_address','property_city','property_state','property_zip','auction_date','auction_time','auction_site','newspaper','publication_date','scraped_date'];
+  const header=fields.join(',');
+  const rows=filteredRecords.map(r=>fields.map(f=>'"'+String(r[f]??'').replace(/"/g,'""')+'"').join(','));
+  const blob=new Blob([[header,...rows].join('\n')],{type:'text/csv'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='fl-foreclosures-'+new Date().toISOString().slice(0,10)+'.csv';
+  a.click();
+}
+
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+loadData();
+</script>
+</body>
+</html>
