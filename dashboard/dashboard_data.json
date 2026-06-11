@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-06-10T00:00:00",
+  "total_records": 2,
+  "county_summary": {
+    "Hillsborough": {"count": 2, "cities": ["Wimauma", "Tampa"]}
+  },
+  "city_summary": {
+    "Wimauma": {"count": 1, "county": "Hillsborough"},
+    "Tampa": {"count": 1, "county": "Hillsborough"}
+  },
+  "auction_calendar": {"June 26, 2026": 1, "June 22, 2026": 1},
+  "records": [
+    {"county":"Hillsborough","defendant":"Robert L. Harrison, Jill A. Harrison","plaintiff":"Amerihome Mortgage Company, Llc","case_number":"23-CA-014061","property_address":"17029 Peaceful Valley Dr","property_city":"Wimauma","property_state":"FL","property_zip":"33598","auction_date":"June 26, 2026","auction_time":"10:00 AM","auction_site":"http://www.hillsborough.realforeclose.com","newspaper":"Business Observer - Hillsborough","publication_date":"2026-06-05","subcategory":"Foreclosure Sales - Miscellaneous","scraped_date":"2026-06-10"},
+    {"county":"Hillsborough","defendant":"Asdollah S. Amroei","plaintiff":"The Bank Of New York Mellon","case_number":"19-CA-001167 DIV B","property_address":"13712 Halliford Drive","property_city":"Tampa","property_state":"FL","property_zip":"33624","auction_date":"June 22, 2026","auction_time":"10:00 AM","auction_site":"www.hillsborough.realforeclose.com","newspaper":"Business Observer - Hillsborough","publication_date":"2026-06-05","subcategory":"Foreclosure Sales - Miscellaneous","scraped_date":"2026-06-10"}
+  ]
+}
