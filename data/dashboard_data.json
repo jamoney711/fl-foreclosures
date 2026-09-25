@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-18T14:55:46.178928",
-  "total_records": 61,
+  "generated_at": "2026-09-25T15:48:58.642901",
+  "total_records": 59,
   "county_summary": {
     "Hillsborough": {
       "count": 13,
@@ -10,15 +10,14 @@
         "Lutz",
         "Plant City",
         "Riverview",
-        "Seffner",
         "Spring Hill",
-        "Tampa"
+        "Tampa",
+        "Unknown"
       ]
     },
     "Polk": {
       "count": 13,
       "cities": [
-        "Bartow",
         "Cocoa",
         "Lakeland",
         "Palm Bay",
@@ -27,51 +26,31 @@
         "Unknown"
       ]
     },
-    "Marion": {
-      "count": 12,
-      "cities": [
-        "Ocala",
-        "Summerfield"
-      ]
-    },
     "Orange": {
       "count": 11,
       "cities": [
         "Melbourne",
         "Palm Bay",
+        "Panama City",
         "Titusville",
         "Viera"
       ]
     },
     "Duval": {
-      "count": 12,
+      "count": 11,
       "cities": [
         "Jacksonville",
         "Jacksonville Beach"
       ]
+    },
+    "Marion": {
+      "count": 11,
+      "cities": [
+        "Ocala"
+      ]
     }
   },
   "city_summary": {
-    "Seffner": {
-      "count": 1,
-      "county": "Hillsborough"
-    },
-    "Bartow": {
-      "count": 1,
-      "county": "Polk"
-    },
-    "Summerfield": {
-      "count": 1,
-      "county": "Marion"
-    },
-    "Titusville": {
-      "count": 3,
-      "county": "Orange"
-    },
-    "Jacksonville": {
-      "count": 11,
-      "county": "Duval"
-    },
     "Lutz": {
       "count": 1,
       "county": "Hillsborough"
@@ -84,12 +63,16 @@
       "count": 5,
       "county": "Orange"
     },
+    "Jacksonville": {
+      "count": 10,
+      "county": "Duval"
+    },
     "Brandon": {
       "count": 1,
       "county": "Hillsborough"
     },
     "Unknown": {
-      "count": 6,
+      "count": 8,
       "county": "Polk"
     },
     "Ocala": {
@@ -103,6 +86,10 @@
     "Palm Bay": {
       "count": 3,
       "county": "Polk"
+    },
+    "Titusville": {
+      "count": 2,
+      "county": "Orange"
     },
     "Riverview": {
       "count": 1,
@@ -139,16 +126,16 @@
     "Apollo Beach": {
       "count": 1,
       "county": "Hillsborough"
+    },
+    "Panama City": {
+      "count": 1,
+      "county": "Orange"
     }
   },
   "auction_calendar": {
-    "June 18, 2026": 1,
-    "July 21, 2026": 1,
-    "July 23, 2026": 2,
-    "July 22, 2026": 2,
-    "August 20, 2026": 2,
     "July 27, 2026": 1,
     "July 3, 2026": 1,
+    "July 22, 2026": 1,
     "August 3, 2026": 1,
     "August 6, 2026": 2,
     "July 10, 2026": 3,
@@ -157,6 +144,8 @@
     "August 31, 2026": 1,
     "August 25, 2026": 2,
     "July 24, 2026": 2,
+    "July 23, 2026": 1,
+    "August 20, 2026": 1,
     "July 31, 2026": 2,
     "August 19, 2026": 1,
     "July 28, 2026": 1,
@@ -182,94 +171,11 @@
     "September 10, 2026": 1,
     "October 07, 2026": 1,
     "September 18, 2026": 2,
-    "October 21, 2026": 1
+    "October 21, 2026": 1,
+    "October 29, 2026": 1,
+    "September 25, 2026": 2
   },
   "records": [
-    {
-      "defendant": "Amargo Gonzalez",
-      "plaintiff": "Roofing-Tampa, Llc",
-      "case_number": "25-CC-054370",
-      "property_address": "2039 Ronald Circle",
-      "property_city": "Seffner",
-      "property_state": "FL",
-      "property_zip": "",
-      "auction_date": "June 18, 2026",
-      "auction_time": "10:00 AM",
-      "auction_site": "https://www.hillsborough.realforeclose.com",
-      "newspaper": "Business ObserverBusiness Observer - CharlotteBusiness Observer - CollierBusiness Observer - HillsboroughBusiness Observer - LeeBusiness Observer - ManateeBusiness Observer - OrangeBusiness Observer - PascoBusiness Observer - PinellasBusiness Observer - PolkBusiness Observer - SarasotaCalhoun-Liberty Journal, TheCaloosa BelleCape Coral BreezeCharlotte County Florida WeeklyChiefland CitizenCitrus County ChronicleCity of Auburndale - Polk CountyCity of Bartow - Polk CountyCity of Davenport - Polk CountyCity of Eagle Lake - Polk CountyCity of Fort Meade - Polk CountyCity of Frostproof - Polk CountyCity of Haines City - Polk CountyCity of Lake Alfred - Polk CountyCity of Lake Wales - Polk CountyCity of Lakeland - Polk CountyCity of Mulberry - Polk CountyCity of Polk City - Polk CountyCity of Winter Haven - Polk CountyClay TodayClermont SunCoastal Breeze NewsCounty Record, TheCreative Loafing TampaCrestview News BulletinDaily Commercial, TheDaily Sun, TheDaytona Beach News-Journal, TheDeSoto Sun WeeklyDestin Log, TheDiario Las AmericasDixie County AdvocateEagle, TheEl Nuevo HeraldEnglewood SunEscambia Sun-PressFernandina Beach News-LeaderFlorida Press Association TestFlorida Sentinel BulletinFlorida Sentry, TheFlorida Star, TheFlorida Sun, TheFlorida Times-Union, TheFlorida TodayFlorida WeeklyFort Myers Florida WeeklyFour Corners SunFree PressGabber Newspaper, TheGadsden County TimesGainesville Mainstreet Daily NewsGainesville Sun, TheGilchrist County JournalGraceville NewsGulf Breeze NewsHavana HeraldHavana Herald, TheHendry-Glades Sunday NewsHerald Advocate, TheHerald-TribuneHeritage Florida Jewish NewsHernando Sun, TheHighlands News-SunHolmes County Times-AdvertiserHometown NewsHometown News DelandHometown News DeltonaHometown News Fort PierceHometown News Martin CountyHometown News Media GroupHometown News MelbourneHometown News New Smyrna Beach/Edgewater/Oak HillHometown News North BrevardHometown News Ormond Beach/Daytona Beach/Holly HillHometown News Palm BayHometown News Port Orange/S. Daytona/Ponce InletHometown News Port St. LucieHometown News SebastianHometown News Suntree/Viera/RockledgeHometown News The BeachesHometown News Vero BeachIndian River Press JournalJackson County Floridan, MariannaJackson County TimesJacksonville Business JournalJacksonville Daily Record - Clay CountyJacksonville Daily Record - Duval CountyJacksonville Daily Record - Nassau CountyJacksonville Daily Record - St Johns CountyJefferson County JournalJupiter Courier, TheKey West CitizenKeys Weekly NewspapersLaGaceta NewspaperLake City ReporterLake Okeechobee NewsLake Region MonitorLake Worth Herald, TheLakeland SunLaker / Lutz News, TheLedger, TheLehigh Acres News StarLevy CitizenLongboat ObserverMadison County Carrier & Madison Enterprise-RecorderMiami Daily Business ReviewMiami Herald, TheMiami New TimesMiami TimesMiami TodayMiami's Community NewspapersMonticello NewsNaples Daily NewsNaples Florida WeeklyNaples Press, TheNassau County RecordNavarre PressNeves Media Apalachicola TimesNeves Media Holmes County Times AdvertiserNeves Media Port St. Joe StarNeves Media Washington County NewsNews Herald, TheNews-Press, TheNorth Lake OutpostNorth Port SunNorthwest Florida Daily News, Ft. WaltonOcala GazetteOcala Star-BannerOrlando AdvocateOrlando Business JournalOrlando SentinelOrlando TimesOrlando WeeklyOrmond Beach ObserverOsceola News-GazettePalatka Daily NewsPalm Beach Daily Business ReviewPalm Beach Daily NewsPalm Beach Post, ThePalm Coast News TribunePalm Coast ObserverPanama City News-HeraldPenny Saver Weekly NewsPensacola News JournalPerry News-Herald/Taco TimesPolk CountyPonte Vedra LeaderPonte Vedra RecorderPort Charlotte SunPort St. Joe StarPress JournalPunta Gorda SunquoinRiverbend NewsRiverland NewsSanford Herald, TheSanta Rosa Press-GazetteSarasota Herald-TribuneSarasota ObserverSeminole / Beach BeaconSouth Dade News LeaderSouth Florida Business JournalSouth Florida Sun-Sentinel, Ft. LauderdaleSt. Augustine Record, TheSt. Lucie News TribuneStar, TheStuart NewsSummation Weekly, TheSumter Sun TimesSuncoast News - PascoTallahassee AdvertiserTallahassee DemocratTampa Bay Business JournalTampa Bay NewspapersTampa Bay TimesTown of Dundee - Polk CountyTown of Hillcrest Heights - Polk CountyTown of Lake Hamilton - Polk CountyTrader Jake'sTriangle SunUnion County TimesVenice Gondolier Sun, TheVeteran VoiceVillage of Highlands Park - Polk CountyVillages Daily Sun, TheVoice of South MarionVolusia ReviewWakulla News, TheWakulla Sun, TheWashington County NewsWest Orange Times, TheWest Volusia Beacon, TheWinter Haven SunZephyrhills NewsNavigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.AlachuaBakerBayBradfordBrevardBrowardCalhounCharlotteCitrusClayCollierColumbiaDesotoDixieDuvalEscambiaFlaglerFranklinGadsdenGilchristGladesGulfHamiltonHardeeHendryHernandoHighlandsHillsboroughHolmesIndian RiverJacksonJeffersonLafayetteLakeLeeLeonLevyLibertyMadisonManateeMarionMartinMiami-DadeMonroeNassauOkaloosaOkeechobeeOrangeOsceolaPalm BeachPascoPinellasPolkPutnamSanta RosaSarasotaSeminoleSt JohnsSt LucieSumterSuwanneeTaylorUnionVolusiaWakullaWashingtonUpdateClearShowing 1 - 12 of 192 resultsSort by: NewestBusiness Observer - Hillsborough TampaJune 26, 2026Keywords:Business Observer - Hillsborough 06/26/2026Miscellaneous NoticesBusiness Observer - Hillsborough TampaJune 26, 2026NOTICE OF FORECLOSURE SALE",
-      "publication_date": "",
-      "subcategory": "",
-      "county": "Hillsborough",
-      "scraped_date": "2026-06-26"
-    },
-    {
-      "defendant": "Emmanuel Three 7 Realty, Inc., A Florida Corporation; Jeremy Hussey, An Individual; Kahlil Moses; Damien Moses; Melissa A. Moses; Unknown Tenant #1; Unknown Tenant #2",
-      "plaintiff": "U.S. Bank Trust National Association, Not In Its Individual Capacity But Solely As Owner Trustee For Rcf 2 Acquisition Trust",
-      "case_number": "",
-      "property_address": "295 S Oak Ave",
-      "property_city": "Bartow",
-      "property_state": "FL",
-      "property_zip": "33830",
-      "auction_date": "July 21, 2026",
-      "auction_time": "10:00 AM",
-      "auction_site": "www.polk.realforeclose.com",
-      "newspaper": "Business ObserverBusiness Observer - CharlotteBusiness Observer - CollierBusiness Observer - HillsboroughBusiness Observer - LeeBusiness Observer - ManateeBusiness Observer - OrangeBusiness Observer - PascoBusiness Observer - PinellasBusiness Observer - PolkBusiness Observer - SarasotaCalhoun-Liberty Journal, TheCaloosa BelleCape Coral BreezeCharlotte County Florida WeeklyChiefland CitizenCitrus County ChronicleCity of Auburndale - Polk CountyCity of Bartow - Polk CountyCity of Davenport - Polk CountyCity of Eagle Lake - Polk CountyCity of Fort Meade - Polk CountyCity of Frostproof - Polk CountyCity of Haines City - Polk CountyCity of Lake Alfred - Polk CountyCity of Lake Wales - Polk CountyCity of Lakeland - Polk CountyCity of Mulberry - Polk CountyCity of Polk City - Polk CountyCity of Winter Haven - Polk CountyClay TodayClermont SunCoastal Breeze NewsCounty Record, TheCreative Loafing TampaCrestview News BulletinDaily Commercial, TheDaily Sun, TheDaytona Beach News-Journal, TheDeSoto Sun WeeklyDestin Log, TheDiario Las AmericasDixie County AdvocateEagle, TheEl Nuevo HeraldEnglewood SunEscambia Sun-PressFernandina Beach News-LeaderFlorida Press Association TestFlorida Sentinel BulletinFlorida Sentry, TheFlorida Star, TheFlorida Sun, TheFlorida Times-Union, TheFlorida TodayFlorida WeeklyFort Myers Florida WeeklyFour Corners SunFree PressGabber Newspaper, TheGadsden County TimesGainesville Mainstreet Daily NewsGainesville Sun, TheGilchrist County JournalGraceville NewsGulf Breeze NewsHavana HeraldHavana Herald, TheHendry-Glades Sunday NewsHerald Advocate, TheHerald-TribuneHeritage Florida Jewish NewsHernando Sun, TheHighlands News-SunHolmes County Times-AdvertiserHometown NewsHometown News DelandHometown News DeltonaHometown News Fort PierceHometown News Martin CountyHometown News Media GroupHometown News MelbourneHometown News New Smyrna Beach/Edgewater/Oak HillHometown News North BrevardHometown News Ormond Beach/Daytona Beach/Holly HillHometown News Palm BayHometown News Port Orange/S. Daytona/Ponce InletHometown News Port St. LucieHometown News SebastianHometown News Suntree/Viera/RockledgeHometown News The BeachesHometown News Vero BeachIndian River Press JournalJackson County Floridan, MariannaJackson County TimesJacksonville Business JournalJacksonville Daily Record - Clay CountyJacksonville Daily Record - Duval CountyJacksonville Daily Record - Nassau CountyJacksonville Daily Record - St Johns CountyJefferson County JournalJupiter Courier, TheKey West CitizenKeys Weekly NewspapersLaGaceta NewspaperLake City ReporterLake Okeechobee NewsLake Region MonitorLake Worth Herald, TheLakeland SunLaker / Lutz News, TheLedger, TheLehigh Acres News StarLevy CitizenLongboat ObserverMadison County Carrier & Madison Enterprise-RecorderMiami Daily Business ReviewMiami Herald, TheMiami New TimesMiami TimesMiami TodayMiami's Community NewspapersMonticello NewsNaples Daily NewsNaples Florida WeeklyNaples Press, TheNassau County RecordNavarre PressNeves Media Apalachicola TimesNeves Media Holmes County Times AdvertiserNeves Media Port St. Joe StarNeves Media Washington County NewsNews Herald, TheNews-Press, TheNorth Lake OutpostNorth Port SunNorthwest Florida Daily News, Ft. WaltonOcala GazetteOcala Star-BannerOrlando AdvocateOrlando Business JournalOrlando SentinelOrlando TimesOrlando WeeklyOrmond Beach ObserverOsceola News-GazettePalatka Daily NewsPalm Beach Daily Business ReviewPalm Beach Daily NewsPalm Beach Post, ThePalm Coast News TribunePalm Coast ObserverPanama City News-HeraldPenny Saver Weekly NewsPensacola News JournalPerry News-Herald/Taco TimesPolk CountyPonte Vedra LeaderPonte Vedra RecorderPort Charlotte SunPort St. Joe StarPress JournalPunta Gorda SunquoinRiverbend NewsRiverland NewsSanford Herald, TheSanta Rosa Press-GazetteSarasota Herald-TribuneSarasota ObserverSeminole / Beach BeaconSouth Dade News LeaderSouth Florida Business JournalSouth Florida Sun-Sentinel, Ft. LauderdaleSt. Augustine Record, TheSt. Lucie News TribuneStar, TheStuart NewsSummation Weekly, TheSumter Sun TimesSuncoast News - PascoTallahassee AdvertiserTallahassee DemocratTampa Bay Business JournalTampa Bay NewspapersTampa Bay TimesTown of Dundee - Polk CountyTown of Hillcrest Heights - Polk CountyTown of Lake Hamilton - Polk CountyTrader Jake'sTriangle SunUnion County TimesVenice Gondolier Sun, TheVeteran VoiceVillage of Highlands Park - Polk CountyVillages Daily Sun, TheVoice of South MarionVolusia ReviewWakulla News, TheWakulla Sun, TheWashington County NewsWest Orange Times, TheWest Volusia Beacon, TheWinter Haven SunZephyrhills NewsNavigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.AlachuaBakerBayBradfordBrevardBrowardCalhounCharlotteCitrusClayCollierColumbiaDesotoDixieDuvalEscambiaFlaglerFranklinGadsdenGilchristGladesGulfHamiltonHardeeHendryHernandoHighlandsHillsboroughHolmesIndian RiverJacksonJeffersonLafayetteLakeLeeLeonLevyLibertyMadisonManateeMarionMartinMiami-DadeMonroeNassauOkaloosaOkeechobeeOrangeOsceolaPalm BeachPascoPinellasPolkPutnamSanta RosaSarasotaSeminoleSt JohnsSt LucieSumterSuwanneeTaylorUnionVolusiaWakullaWashingtonUpdateClearShowing 1 - 12 of 174 resultsSort by: NewestBusiness Observer - Polk LakelandJune 26, 2026Keywords:Business Observer - Polk 06/26/2026Miscellaneous NoticesBusiness Observer - Polk LakelandJune 26, 2026NOTICE OF FORECLOSURE SALE",
-      "publication_date": "",
-      "subcategory": "",
-      "county": "Polk",
-      "scraped_date": "2026-06-26"
-    },
-    {
-      "defendant": "Dane E. Herb, Unknown, Tenant #1, And Unknown Tenant #2",
-      "plaintiff": "Us Bank Trust National Association, Not In Its Individual Capacity But Solely As Owner Trustee For Vrmtg Asset Trust",
-      "case_number": "2026-CC-0567",
-      "property_address": "11928 Se 91St Circle",
-      "property_city": "Summerfield",
-      "property_state": "FL",
-      "property_zip": "34491",
-      "auction_date": "July 23, 2026",
-      "auction_time": "11:00 AM",
-      "auction_site": "WWW.MARION.REALFORECLOSE.COM",
-      "newspaper": "Business ObserverBusiness Observer - CharlotteBusiness Observer - CollierBusiness Observer - HillsboroughBusiness Observer - LeeBusiness Observer - ManateeBusiness Observer - OrangeBusiness Observer - PascoBusiness Observer - PinellasBusiness Observer - PolkBusiness Observer - SarasotaCalhoun-Liberty Journal, TheCaloosa BelleCape Coral BreezeCharlotte County Florida WeeklyChiefland CitizenCitrus County ChronicleCity of Auburndale - Polk CountyCity of Bartow - Polk CountyCity of Davenport - Polk CountyCity of Eagle Lake - Polk CountyCity of Fort Meade - Polk CountyCity of Frostproof - Polk CountyCity of Haines City - Polk CountyCity of Lake Alfred - Polk CountyCity of Lake Wales - Polk CountyCity of Lakeland - Polk CountyCity of Mulberry - Polk CountyCity of Polk City - Polk CountyCity of Winter Haven - Polk CountyClay TodayClermont SunCoastal Breeze NewsCounty Record, TheCreative Loafing TampaCrestview News BulletinDaily Commercial, TheDaily Sun, TheDaytona Beach News-Journal, TheDeSoto Sun WeeklyDestin Log, TheDiario Las AmericasDixie County AdvocateEagle, TheEl Nuevo HeraldEnglewood SunEscambia Sun-PressFernandina Beach News-LeaderFlorida Press Association TestFlorida Sentinel BulletinFlorida Sentry, TheFlorida Star, TheFlorida Sun, TheFlorida Times-Union, TheFlorida TodayFlorida WeeklyFort Myers Florida WeeklyFour Corners SunFree PressGabber Newspaper, TheGadsden County TimesGainesville Mainstreet Daily NewsGainesville Sun, TheGilchrist County JournalGraceville NewsGulf Breeze NewsHavana HeraldHavana Herald, TheHendry-Glades Sunday NewsHerald Advocate, TheHerald-TribuneHeritage Florida Jewish NewsHernando Sun, TheHighlands News-SunHolmes County Times-AdvertiserHometown NewsHometown News DelandHometown News DeltonaHometown News Fort PierceHometown News Martin CountyHometown News Media GroupHometown News MelbourneHometown News New Smyrna Beach/Edgewater/Oak HillHometown News North BrevardHometown News Ormond Beach/Daytona Beach/Holly HillHometown News Palm BayHometown News Port Orange/S. Daytona/Ponce InletHometown News Port St. LucieHometown News SebastianHometown News Suntree/Viera/RockledgeHometown News The BeachesHometown News Vero BeachIndian River Press JournalJackson County Floridan, MariannaJackson County TimesJacksonville Business JournalJacksonville Daily Record - Clay CountyJacksonville Daily Record - Duval CountyJacksonville Daily Record - Nassau CountyJacksonville Daily Record - St Johns CountyJefferson County JournalJupiter Courier, TheKey West CitizenKeys Weekly NewspapersLaGaceta NewspaperLake City ReporterLake Okeechobee NewsLake Region MonitorLake Worth Herald, TheLakeland SunLaker / Lutz News, TheLedger, TheLehigh Acres News StarLevy CitizenLongboat ObserverMadison County Carrier & Madison Enterprise-RecorderMiami Daily Business ReviewMiami Herald, TheMiami New TimesMiami TimesMiami TodayMiami's Community NewspapersMonticello NewsNaples Daily NewsNaples Florida WeeklyNaples Press, TheNassau County RecordNavarre PressNeves Media Apalachicola TimesNeves Media Holmes County Times AdvertiserNeves Media Port St. Joe StarNeves Media Washington County NewsNews Herald, TheNews-Press, TheNorth Lake OutpostNorth Port SunNorthwest Florida Daily News, Ft. WaltonOcala GazetteOcala Star-BannerOrlando AdvocateOrlando Business JournalOrlando SentinelOrlando TimesOrlando WeeklyOrmond Beach ObserverOsceola News-GazettePalatka Daily NewsPalm Beach Daily Business ReviewPalm Beach Daily NewsPalm Beach Post, ThePalm Coast News TribunePalm Coast ObserverPanama City News-HeraldPenny Saver Weekly NewsPensacola News JournalPerry News-Herald/Taco TimesPolk CountyPonte Vedra LeaderPonte Vedra RecorderPort Charlotte SunPort St. Joe StarPress JournalPunta Gorda SunquoinRiverbend NewsRiverland NewsSanford Herald, TheSanta Rosa Press-GazetteSarasota Herald-TribuneSarasota ObserverSeminole / Beach BeaconSouth Dade News LeaderSouth Florida Business JournalSouth Florida Sun-Sentinel, Ft. LauderdaleSt. Augustine Record, TheSt. Lucie News TribuneStar, TheStuart NewsSummation Weekly, TheSumter Sun TimesSuncoast News - PascoTallahassee AdvertiserTallahassee DemocratTampa Bay Business JournalTampa Bay NewspapersTampa Bay TimesTown of Dundee - Polk CountyTown of Hillcrest Heights - Polk CountyTown of Lake Hamilton - Polk CountyTrader Jake'sTriangle SunUnion County TimesVenice Gondolier Sun, TheVeteran VoiceVillage of Highlands Park - Polk CountyVillages Daily Sun, TheVoice of South MarionVolusia ReviewWakulla News, TheWakulla Sun, TheWashington County NewsWest Orange Times, TheWest Volusia Beacon, TheWinter Haven SunZephyrhills NewsNavigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.AlachuaBakerBayBradfordBrevardBrowardCalhounCharlotteCitrusClayCollierColumbiaDesotoDixieDuvalEscambiaFlaglerFranklinGadsdenGilchristGladesGulfHamiltonHardeeHendryHernandoHighlandsHillsboroughHolmesIndian RiverJacksonJeffersonLafayetteLakeLeeLeonLevyLibertyMadisonManateeMarionMartinMiami-DadeMonroeNassauOkaloosaOkeechobeeOrangeOsceolaPalm BeachPascoPinellasPolkPutnamSanta RosaSarasotaSeminoleSt JohnsSt LucieSumterSuwanneeTaylorUnionVolusiaWakullaWashingtonUpdateClearShowing 1 - 12 of 102 resultsSort by: NewestOcala Gazette June 26, 2026IN THE COUNTY COURT OF THE FIFTH JUDICIAL CIRCUIT IN AND FOR MARION COUNTY, FLORIDA",
-      "publication_date": "",
-      "subcategory": "",
-      "county": "Marion",
-      "scraped_date": "2026-06-26"
-    },
-    {
-      "defendant": "Antoni P. Delatour A/K/A Antoni Delatour",
-      "plaintiff": "Lakeview Loan Servicing, Llc",
-      "case_number": "2025-CA-008111",
-      "property_address": "3435 Sutton Drive",
-      "property_city": "Titusville",
-      "property_state": "FL",
-      "property_zip": "32796",
-      "auction_date": "July 22, 2026",
-      "auction_time": "11:00 AM",
-      "auction_site": "www.myorangeclerk.realforeclose.com",
-      "newspaper": "Business ObserverBusiness Observer - CharlotteBusiness Observer - CollierBusiness Observer - HillsboroughBusiness Observer - LeeBusiness Observer - ManateeBusiness Observer - OrangeBusiness Observer - PascoBusiness Observer - PinellasBusiness Observer - PolkBusiness Observer - SarasotaCalhoun-Liberty Journal, TheCaloosa BelleCape Coral BreezeCharlotte County Florida WeeklyChiefland CitizenCitrus County ChronicleCity of Auburndale - Polk CountyCity of Bartow - Polk CountyCity of Davenport - Polk CountyCity of Eagle Lake - Polk CountyCity of Fort Meade - Polk CountyCity of Frostproof - Polk CountyCity of Haines City - Polk CountyCity of Lake Alfred - Polk CountyCity of Lake Wales - Polk CountyCity of Lakeland - Polk CountyCity of Mulberry - Polk CountyCity of Polk City - Polk CountyCity of Winter Haven - Polk CountyClay TodayClermont SunCoastal Breeze NewsCounty Record, TheCreative Loafing TampaCrestview News BulletinDaily Commercial, TheDaily Sun, TheDaytona Beach News-Journal, TheDeSoto Sun WeeklyDestin Log, TheDiario Las AmericasDixie County AdvocateEagle, TheEl Nuevo HeraldEnglewood SunEscambia Sun-PressFernandina Beach News-LeaderFlorida Press Association TestFlorida Sentinel BulletinFlorida Sentry, TheFlorida Star, TheFlorida Sun, TheFlorida Times-Union, TheFlorida TodayFlorida WeeklyFort Myers Florida WeeklyFour Corners SunFree PressGabber Newspaper, TheGadsden County TimesGainesville Mainstreet Daily NewsGainesville Sun, TheGilchrist County JournalGraceville NewsGulf Breeze NewsHavana HeraldHavana Herald, TheHendry-Glades Sunday NewsHerald Advocate, TheHerald-TribuneHeritage Florida Jewish NewsHernando Sun, TheHighlands News-SunHolmes County Times-AdvertiserHometown NewsHometown News DelandHometown News DeltonaHometown News Fort PierceHometown News Martin CountyHometown News Media GroupHometown News MelbourneHometown News New Smyrna Beach/Edgewater/Oak HillHometown News North BrevardHometown News Ormond Beach/Daytona Beach/Holly HillHometown News Palm BayHometown News Port Orange/S. Daytona/Ponce InletHometown News Port St. LucieHometown News SebastianHometown News Suntree/Viera/RockledgeHometown News The BeachesHometown News Vero BeachIndian River Press JournalJackson County Floridan, MariannaJackson County TimesJacksonville Business JournalJacksonville Daily Record - Clay CountyJacksonville Daily Record - Duval CountyJacksonville Daily Record - Nassau CountyJacksonville Daily Record - St Johns CountyJefferson County JournalJupiter Courier, TheKey West CitizenKeys Weekly NewspapersLaGaceta NewspaperLake City ReporterLake Okeechobee NewsLake Region MonitorLake Worth Herald, TheLakeland SunLaker / Lutz News, TheLedger, TheLehigh Acres News StarLevy CitizenLongboat ObserverMadison County Carrier & Madison Enterprise-RecorderMiami Daily Business ReviewMiami Herald, TheMiami New TimesMiami TimesMiami TodayMiami's Community NewspapersMonticello NewsNaples Daily NewsNaples Florida WeeklyNaples Press, TheNassau County RecordNavarre PressNeves Media Apalachicola TimesNeves Media Holmes County Times AdvertiserNeves Media Port St. Joe StarNeves Media Washington County NewsNews Herald, TheNews-Press, TheNorth Lake OutpostNorth Port SunNorthwest Florida Daily News, Ft. WaltonOcala GazetteOcala Star-BannerOrlando AdvocateOrlando Business JournalOrlando SentinelOrlando TimesOrlando WeeklyOrmond Beach ObserverOsceola News-GazettePalatka Daily NewsPalm Beach Daily Business ReviewPalm Beach Daily NewsPalm Beach Post, ThePalm Coast News TribunePalm Coast ObserverPanama City News-HeraldPenny Saver Weekly NewsPensacola News JournalPerry News-Herald/Taco TimesPolk CountyPonte Vedra LeaderPonte Vedra RecorderPort Charlotte SunPort St. Joe StarPress JournalPunta Gorda SunquoinRiverbend NewsRiverland NewsSanford Herald, TheSanta Rosa Press-GazetteSarasota Herald-TribuneSarasota ObserverSeminole / Beach BeaconSouth Dade News LeaderSouth Florida Business JournalSouth Florida Sun-Sentinel, Ft. LauderdaleSt. Augustine Record, TheSt. Lucie News TribuneStar, TheStuart NewsSummation Weekly, TheSumter Sun TimesSuncoast News - PascoTallahassee AdvertiserTallahassee DemocratTampa Bay Business JournalTampa Bay NewspapersTampa Bay TimesTown of Dundee - Polk CountyTown of Hillcrest Heights - Polk CountyTown of Lake Hamilton - Polk CountyTrader Jake'sTriangle SunUnion County TimesVenice Gondolier Sun, TheVeteran VoiceVillage of Highlands Park - Polk CountyVillages Daily Sun, TheVoice of South MarionVolusia ReviewWakulla News, TheWakulla Sun, TheWashington County NewsWest Orange Times, TheWest Volusia Beacon, TheWinter Haven SunZephyrhills NewsNavigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.AlachuaBakerBayBradfordBrevardBrowardCalhounCharlotteCitrusClayCollierColumbiaDesotoDixieDuvalEscambiaFlaglerFranklinGadsdenGilchristGladesGulfHamiltonHardeeHendryHernandoHighlandsHillsboroughHolmesIndian RiverJacksonJeffersonLafayetteLakeLeeLeonLevyLibertyMadisonManateeMarionMartinMiami-DadeMonroeNassauOkaloosaOkeechobeeOrangeOsceolaPalm BeachPascoPinellasPolkPutnamSanta RosaSarasotaSeminoleSt JohnsSt LucieSumterSuwanneeTaylorUnionVolusiaWakullaWashingtonUpdateClearShowing 1 - 12 of 306 resultsSort by: NewestFlorida Today MelbourneJune 26, 2026NOTICE OF ACTION",
-      "publication_date": "",
-      "subcategory": "",
-      "county": "Orange",
-      "scraped_date": "2026-06-26"
-    },
-    {
-      "defendant": "Tahlia Q. Banks",
-      "plaintiff": "Planet Home Lending, Llc",
-      "case_number": "",
-      "property_address": "6845 Crystal River Road",
-      "property_city": "Jacksonville",
-      "property_state": "FL",
-      "property_zip": "32219",
-      "auction_date": "August 20, 2026",
-      "auction_time": "11:00 AM",
-      "auction_site": "www.duval.realforeclose.com",
-      "newspaper": "Business ObserverBusiness Observer - CharlotteBusiness Observer - CollierBusiness Observer - HillsboroughBusiness Observer - LeeBusiness Observer - ManateeBusiness Observer - OrangeBusiness Observer - PascoBusiness Observer - PinellasBusiness Observer - PolkBusiness Observer - SarasotaCalhoun-Liberty Journal, TheCaloosa BelleCape Coral BreezeCharlotte County Florida WeeklyChiefland CitizenCitrus County ChronicleCity of Auburndale - Polk CountyCity of Bartow - Polk CountyCity of Davenport - Polk CountyCity of Eagle Lake - Polk CountyCity of Fort Meade - Polk CountyCity of Frostproof - Polk CountyCity of Haines City - Polk CountyCity of Lake Alfred - Polk CountyCity of Lake Wales - Polk CountyCity of Lakeland - Polk CountyCity of Mulberry - Polk CountyCity of Polk City - Polk CountyCity of Winter Haven - Polk CountyClay TodayClermont SunCoastal Breeze NewsCounty Record, TheCreative Loafing TampaCrestview News BulletinDaily Commercial, TheDaily Sun, TheDaytona Beach News-Journal, TheDeSoto Sun WeeklyDestin Log, TheDiario Las AmericasDixie County AdvocateEagle, TheEl Nuevo HeraldEnglewood SunEscambia Sun-PressFernandina Beach News-LeaderFlorida Press Association TestFlorida Sentinel BulletinFlorida Sentry, TheFlorida Star, TheFlorida Sun, TheFlorida Times-Union, TheFlorida TodayFlorida WeeklyFort Myers Florida WeeklyFour Corners SunFree PressGabber Newspaper, TheGadsden County TimesGainesville Mainstreet Daily NewsGainesville Sun, TheGilchrist County JournalGraceville NewsGulf Breeze NewsHavana HeraldHavana Herald, TheHendry-Glades Sunday NewsHerald Advocate, TheHerald-TribuneHeritage Florida Jewish NewsHernando Sun, TheHighlands News-SunHolmes County Times-AdvertiserHometown NewsHometown News DelandHometown News DeltonaHometown News Fort PierceHometown News Martin CountyHometown News Media GroupHometown News MelbourneHometown News New Smyrna Beach/Edgewater/Oak HillHometown News North BrevardHometown News Ormond Beach/Daytona Beach/Holly HillHometown News Palm BayHometown News Port Orange/S. Daytona/Ponce InletHometown News Port St. LucieHometown News SebastianHometown News Suntree/Viera/RockledgeHometown News The BeachesHometown News Vero BeachIndian River Press JournalJackson County Floridan, MariannaJackson County TimesJacksonville Business JournalJacksonville Daily Record - Clay CountyJacksonville Daily Record - Duval CountyJacksonville Daily Record - Nassau CountyJacksonville Daily Record - St Johns CountyJefferson County JournalJupiter Courier, TheKey West CitizenKeys Weekly NewspapersLaGaceta NewspaperLake City ReporterLake Okeechobee NewsLake Region MonitorLake Worth Herald, TheLakeland SunLaker / Lutz News, TheLedger, TheLehigh Acres News StarLevy CitizenLongboat ObserverMadison County Carrier & Madison Enterprise-RecorderMiami Daily Business ReviewMiami Herald, TheMiami New TimesMiami TimesMiami TodayMiami's Community NewspapersMonticello NewsNaples Daily NewsNaples Florida WeeklyNaples Press, TheNassau County RecordNavarre PressNeves Media Apalachicola TimesNeves Media Holmes County Times AdvertiserNeves Media Port St. Joe StarNeves Media Washington County NewsNews Herald, TheNews-Press, TheNorth Lake OutpostNorth Port SunNorthwest Florida Daily News, Ft. WaltonOcala GazetteOcala Star-BannerOrlando AdvocateOrlando Business JournalOrlando SentinelOrlando TimesOrlando WeeklyOrmond Beach ObserverOsceola News-GazettePalatka Daily NewsPalm Beach Daily Business ReviewPalm Beach Daily NewsPalm Beach Post, ThePalm Coast News TribunePalm Coast ObserverPanama City News-HeraldPenny Saver Weekly NewsPensacola News JournalPerry News-Herald/Taco TimesPolk CountyPonte Vedra LeaderPonte Vedra RecorderPort Charlotte SunPort St. Joe StarPress JournalPunta Gorda SunquoinRiverbend NewsRiverland NewsSanford Herald, TheSanta Rosa Press-GazetteSarasota Herald-TribuneSarasota ObserverSeminole / Beach BeaconSouth Dade News LeaderSouth Florida Business JournalSouth Florida Sun-Sentinel, Ft. LauderdaleSt. Augustine Record, TheSt. Lucie News TribuneStar, TheStuart NewsSummation Weekly, TheSumter Sun TimesSuncoast News - PascoTallahassee AdvertiserTallahassee DemocratTampa Bay Business JournalTampa Bay NewspapersTampa Bay TimesTown of Dundee - Polk CountyTown of Hillcrest Heights - Polk CountyTown of Lake Hamilton - Polk CountyTrader Jake'sTriangle SunUnion County TimesVenice Gondolier Sun, TheVeteran VoiceVillage of Highlands Park - Polk CountyVillages Daily Sun, TheVoice of South MarionVolusia ReviewWakulla News, TheWakulla Sun, TheWashington County NewsWest Orange Times, TheWest Volusia Beacon, TheWinter Haven SunZephyrhills NewsNavigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.AlachuaBakerBayBradfordBrevardBrowardCalhounCharlotteCitrusClayCollierColumbiaDesotoDixieDuvalEscambiaFlaglerFranklinGadsdenGilchristGladesGulfHamiltonHardeeHendryHernandoHighlandsHillsboroughHolmesIndian RiverJacksonJeffersonLafayetteLakeLeeLeonLevyLibertyMadisonManateeMarionMartinMiami-DadeMonroeNassauOkaloosaOkeechobeeOrangeOsceolaPalm BeachPascoPinellasPolkPutnamSanta RosaSarasotaSeminoleSt JohnsSt LucieSumterSuwanneeTaylorUnionVolusiaWakullaWashingtonUpdateClearShowing 1 - 12 of 406 resultsSort by: NewestJacksonville Daily Record - Duval County JacksonvilleJune 25, 2026Notice of Action - Foreclosure",
-      "publication_date": "",
-      "subcategory": "",
-      "county": "Duval",
-      "scraped_date": "2026-06-26"
-    },
     {
       "defendant": "Krystal Willis",
       "plaintiff": "Individual Capacity But Solely As Owner Trustee For Rcf 2 Acquisition Trust",
@@ -1221,6 +1127,57 @@
       "subcategory": "",
       "county": "Duval",
       "scraped_date": "2026-09-18"
+    },
+    {
+      "defendant": "Carrie Hall",
+      "plaintiff": "Quicken Loans, Llc",
+      "case_number": "24-CA-010259",
+      "property_address": "6715 S",
+      "property_city": "",
+      "property_state": "FL",
+      "property_zip": "",
+      "auction_date": "October 29, 2026",
+      "auction_time": "10:00 AM",
+      "auction_site": "http://www.hillsborough.realforeclose.com",
+      "newspaper": "Business ObserverBusiness Observer - CharlotteBusiness Observer - CollierBusiness Observer - HillsboroughBusiness Observer - LeeBusiness Observer - ManateeBusiness Observer - OrangeBusiness Observer - PascoBusiness Observer - PinellasBusiness Observer - PolkBusiness Observer - SarasotaCalhoun-Liberty Journal, TheCaloosa BelleCape Coral BreezeCharlotte County Florida WeeklyChiefland CitizenCitrus County ChronicleCity of Auburndale - Polk CountyCity of Bartow - Polk CountyCity of Davenport - Polk CountyCity of Eagle Lake - Polk CountyCity of Fort Meade - Polk CountyCity of Frostproof - Polk CountyCity of Haines City - Polk CountyCity of Lake Alfred - Polk CountyCity of Lake Wales - Polk CountyCity of Lakeland - Polk CountyCity of Mulberry - Polk CountyCity of Polk City - Polk CountyCity of Winter Haven - Polk CountyClay TodayClermont SunCoastal Breeze NewsCounty Record, TheCreative Loafing TampaCrestview News BulletinDaily Commercial, TheDaily Sun, TheDaytona Beach News-Journal, TheDeSoto Sun WeeklyDestin Log, TheDiario Las AmericasDixie County AdvocateEagle, TheEl Nuevo HeraldEnglewood SunEscambia Sun-PressFernandina Beach News-LeaderFlorida Press Association TestFlorida Sentinel BulletinFlorida Sentry, TheFlorida Star, TheFlorida Sun, TheFlorida Times-Union, TheFlorida TodayFlorida WeeklyFort Myers Florida WeeklyFour Corners SunFree PressGabber Newspaper, TheGadsden County TimesGainesville Mainstreet Daily NewsGainesville Sun, TheGilchrist County HeraldGilchrist County JournalGraceville NewsGulf Breeze NewsHavana HeraldHavana Herald, TheHendry-Glades Sunday NewsHerald Advocate, TheHerald-TribuneHeritage Florida Jewish NewsHernando Sun, TheHighlands News-SunHolmes County Times-AdvertiserHometown NewsHometown News DelandHometown News DeltonaHometown News Fort PierceHometown News Martin CountyHometown News Media GroupHometown News MelbourneHometown News New Smyrna Beach/Edgewater/Oak HillHometown News North BrevardHometown News Ormond Beach/Daytona Beach/Holly HillHometown News Palm BayHometown News Port Orange/S. Daytona/Ponce InletHometown News Port St. LucieHometown News SebastianHometown News Suntree/Viera/RockledgeHometown News The BeachesHometown News Vero BeachIndian River Press JournalJackson County Floridan, MariannaJackson County TimesJacksonville Business JournalJacksonville Daily Record - Clay CountyJacksonville Daily Record - Duval CountyJacksonville Daily Record - Nassau CountyJacksonville Daily Record - St Johns CountyJefferson County JournalJupiter Courier, TheKey West CitizenKeys Weekly NewspapersLaGaceta NewspaperLake City ReporterLake Okeechobee NewsLake Region MonitorLake Worth Herald, TheLakeland SunLaker / Lutz News, TheLedger, TheLehigh Acres News StarLevy CitizenLongboat ObserverMadison County Carrier & Madison Enterprise-RecorderMiami Daily Business ReviewMiami Herald, TheMiami New TimesMiami TimesMiami TodayMiami's Community NewspapersMonticello NewsNaples Daily NewsNaples Florida WeeklyNaples Press, TheNassau County RecordNavarre PressNeves Media Apalachicola TimesNeves Media Holmes County Times AdvertiserNeves Media Port St. Joe StarNeves Media Washington County NewsNews Herald, TheNews-Press, TheNorth Lake OutpostNorth Port SunNorthwest Florida Daily News, Ft. WaltonOcala GazetteOcala Star-BannerOrlando AdvocateOrlando Business JournalOrlando SentinelOrlando TimesOrlando WeeklyOrmond Beach ObserverOsceola News-GazettePalatka Daily NewsPalm Beach Daily Business ReviewPalm Beach Daily NewsPalm Beach Post, ThePalm Coast News TribunePalm Coast ObserverPanama City News-HeraldPenny Saver Weekly NewsPensacola News JournalPerry News-Herald/Taco TimesPlant City ObserverPolk CountyPonte Vedra LeaderPonte Vedra RecorderPort Charlotte SunPort St. Joe StarPress JournalPunta Gorda SunquoinRiverbend NewsRiverland NewsSanford Herald, TheSanta Rosa Press-GazetteSarasota Herald-TribuneSarasota ObserverSeminole / Beach BeaconSouth Dade News LeaderSouth Florida Business JournalSouth Florida Sun-Sentinel, Ft. LauderdaleSt. Augustine Record, TheSt. Lucie News TribuneStar, TheStuart NewsSummation Weekly, TheSumter Sun TimesSuncoast News - PascoTallahassee AdvertiserTallahassee DemocratTampa Bay Business JournalTampa Bay NewspapersTampa Bay TimesTown of Dundee - Polk CountyTown of Hillcrest Heights - Polk CountyTown of Lake Hamilton - Polk CountyTrader Jake'sTriangle SunUnion County TimesVenice Gondolier Sun, TheVeteran VoiceVillage of Highlands Park - Polk CountyVillages Daily Sun, TheVoice of South MarionVolusia ReviewWakulla News, TheWakulla Sun, TheWashington County NewsWest Orange Times, TheWest Volusia Beacon, TheWinter Haven SunZephyrhills NewsNavigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.AlachuaBakerBayBradfordBrevardBrowardCalhounCharlotteCitrusClayCollierColumbiaDesotoDixieDuvalEscambiaFlaglerFranklinGadsdenGilchristGladesGulfHamiltonHardeeHendryHernandoHighlandsHillsboroughHolmesIndian RiverJacksonJeffersonLafayetteLakeLeeLeonLevyLibertyMadisonManateeMarionMartinMiami-DadeMonroeNassauOkaloosaOkeechobeeOrangeOsceolaPalm BeachPascoPinellasPolkPutnamSanta RosaSarasotaSeminoleSt JohnsSt LucieSumterSuwanneeTaylorUnionVolusiaWakullaWashingtonUpdateClearShowing 1 - 12 of 222 resultsSort by: NewestLaGaceta Newspaper TampaSeptember 25, 2026Keywords:legal adsMiscellaneous NoticesLaGaceta Newspaper TampaSeptember 25, 2026Keywords:legal adsMiscellaneous NoticesBusiness Observer - Hillsborough TampaSeptember 25, 2026Keywords:Business Observer - Hillsborough 09/25/2026Miscellaneous NoticesBusiness Observer - Hillsborough TampaSeptember 25, 2026NOTICE OF SALE",
+      "publication_date": "",
+      "subcategory": "",
+      "county": "Hillsborough",
+      "scraped_date": "2026-09-25"
+    },
+    {
+      "defendant": "",
+      "plaintiff": "Lakeview Loan Servicing, Llc",
+      "case_number": "2025-CA-005022",
+      "property_address": "214 Hyacinth Ct,",
+      "property_city": "",
+      "property_state": "FL",
+      "property_zip": "",
+      "auction_date": "September 25, 2026",
+      "auction_time": "10:00 AM",
+      "auction_site": "www.polk.realforeclose.com",
+      "newspaper": "Business ObserverBusiness Observer - CharlotteBusiness Observer - CollierBusiness Observer - HillsboroughBusiness Observer - LeeBusiness Observer - ManateeBusiness Observer - OrangeBusiness Observer - PascoBusiness Observer - PinellasBusiness Observer - PolkBusiness Observer - SarasotaCalhoun-Liberty Journal, TheCaloosa BelleCape Coral BreezeCharlotte County Florida WeeklyChiefland CitizenCitrus County ChronicleCity of Auburndale - Polk CountyCity of Bartow - Polk CountyCity of Davenport - Polk CountyCity of Eagle Lake - Polk CountyCity of Fort Meade - Polk CountyCity of Frostproof - Polk CountyCity of Haines City - Polk CountyCity of Lake Alfred - Polk CountyCity of Lake Wales - Polk CountyCity of Lakeland - Polk CountyCity of Mulberry - Polk CountyCity of Polk City - Polk CountyCity of Winter Haven - Polk CountyClay TodayClermont SunCoastal Breeze NewsCounty Record, TheCreative Loafing TampaCrestview News BulletinDaily Commercial, TheDaily Sun, TheDaytona Beach News-Journal, TheDeSoto Sun WeeklyDestin Log, TheDiario Las AmericasDixie County AdvocateEagle, TheEl Nuevo HeraldEnglewood SunEscambia Sun-PressFernandina Beach News-LeaderFlorida Press Association TestFlorida Sentinel BulletinFlorida Sentry, TheFlorida Star, TheFlorida Sun, TheFlorida Times-Union, TheFlorida TodayFlorida WeeklyFort Myers Florida WeeklyFour Corners SunFree PressGabber Newspaper, TheGadsden County TimesGainesville Mainstreet Daily NewsGainesville Sun, TheGilchrist County HeraldGilchrist County JournalGraceville NewsGulf Breeze NewsHavana HeraldHavana Herald, TheHendry-Glades Sunday NewsHerald Advocate, TheHerald-TribuneHeritage Florida Jewish NewsHernando Sun, TheHighlands News-SunHolmes County Times-AdvertiserHometown NewsHometown News DelandHometown News DeltonaHometown News Fort PierceHometown News Martin CountyHometown News Media GroupHometown News MelbourneHometown News New Smyrna Beach/Edgewater/Oak HillHometown News North BrevardHometown News Ormond Beach/Daytona Beach/Holly HillHometown News Palm BayHometown News Port Orange/S. Daytona/Ponce InletHometown News Port St. LucieHometown News SebastianHometown News Suntree/Viera/RockledgeHometown News The BeachesHometown News Vero BeachIndian River Press JournalJackson County Floridan, MariannaJackson County TimesJacksonville Business JournalJacksonville Daily Record - Clay CountyJacksonville Daily Record - Duval CountyJacksonville Daily Record - Nassau CountyJacksonville Daily Record - St Johns CountyJefferson County JournalJupiter Courier, TheKey West CitizenKeys Weekly NewspapersLaGaceta NewspaperLake City ReporterLake Okeechobee NewsLake Region MonitorLake Worth Herald, TheLakeland SunLaker / Lutz News, TheLedger, TheLehigh Acres News StarLevy CitizenLongboat ObserverMadison County Carrier & Madison Enterprise-RecorderMiami Daily Business ReviewMiami Herald, TheMiami New TimesMiami TimesMiami TodayMiami's Community NewspapersMonticello NewsNaples Daily NewsNaples Florida WeeklyNaples Press, TheNassau County RecordNavarre PressNeves Media Apalachicola TimesNeves Media Holmes County Times AdvertiserNeves Media Port St. Joe StarNeves Media Washington County NewsNews Herald, TheNews-Press, TheNorth Lake OutpostNorth Port SunNorthwest Florida Daily News, Ft. WaltonOcala GazetteOcala Star-BannerOrlando AdvocateOrlando Business JournalOrlando SentinelOrlando TimesOrlando WeeklyOrmond Beach ObserverOsceola News-GazettePalatka Daily NewsPalm Beach Daily Business ReviewPalm Beach Daily NewsPalm Beach Post, ThePalm Coast News TribunePalm Coast ObserverPanama City News-HeraldPenny Saver Weekly NewsPensacola News JournalPerry News-Herald/Taco TimesPlant City ObserverPolk CountyPonte Vedra LeaderPonte Vedra RecorderPort Charlotte SunPort St. Joe StarPress JournalPunta Gorda SunquoinRiverbend NewsRiverland NewsSanford Herald, TheSanta Rosa Press-GazetteSarasota Herald-TribuneSarasota ObserverSeminole / Beach BeaconSouth Dade News LeaderSouth Florida Business JournalSouth Florida Sun-Sentinel, Ft. LauderdaleSt. Augustine Record, TheSt. Lucie News TribuneStar, TheStuart NewsSummation Weekly, TheSumter Sun TimesSuncoast News - PascoTallahassee AdvertiserTallahassee DemocratTampa Bay Business JournalTampa Bay NewspapersTampa Bay TimesTown of Dundee - Polk CountyTown of Hillcrest Heights - Polk CountyTown of Lake Hamilton - Polk CountyTrader Jake'sTriangle SunUnion County TimesVenice Gondolier Sun, TheVeteran VoiceVillage of Highlands Park - Polk CountyVillages Daily Sun, TheVoice of South MarionVolusia ReviewWakulla News, TheWakulla Sun, TheWashington County NewsWest Orange Times, TheWest Volusia Beacon, TheWinter Haven SunZephyrhills NewsNavigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.AlachuaBakerBayBradfordBrevardBrowardCalhounCharlotteCitrusClayCollierColumbiaDesotoDixieDuvalEscambiaFlaglerFranklinGadsdenGilchristGladesGulfHamiltonHardeeHendryHernandoHighlandsHillsboroughHolmesIndian RiverJacksonJeffersonLafayetteLakeLeeLeonLevyLibertyMadisonManateeMarionMartinMiami-DadeMonroeNassauOkaloosaOkeechobeeOrangeOsceolaPalm BeachPascoPinellasPolkPutnamSanta RosaSarasotaSeminoleSt JohnsSt LucieSumterSuwanneeTaylorUnionVolusiaWakullaWashingtonUpdateClearShowing 1 - 12 of 172 resultsSort by: NewestLaGaceta Newspaper TampaSeptember 25, 2026Keywords:legal adsMiscellaneous NoticesLaGaceta Newspaper TampaSeptember 25, 2026Keywords:legal adsMiscellaneous NoticesBusiness Observer - Polk LakelandSeptember 25, 2026Keywords:Business Observer - Polk 09/25/2026Miscellaneous NoticesBusiness Observer - Polk LakelandSeptember 25, 2026NOTICE OF FORECLOSURE SALE",
+      "publication_date": "",
+      "subcategory": "",
+      "county": "Polk",
+      "scraped_date": "2026-09-25"
+    },
+    {
+      "defendant": "Shawna Aleesha Lopez",
+      "plaintiff": "Rocket Mortgage Llc",
+      "case_number": "2025-CA-005648",
+      "property_address": "117 Howard Court",
+      "property_city": "Panama City",
+      "property_state": "FL",
+      "property_zip": "32404",
+      "auction_date": "September 25, 2026",
+      "auction_time": "11:00 AM",
+      "auction_site": "https://brevard.realforeclose.com",
+      "newspaper": "Business ObserverBusiness Observer - CharlotteBusiness Observer - CollierBusiness Observer - HillsboroughBusiness Observer - LeeBusiness Observer - ManateeBusiness Observer - OrangeBusiness Observer - PascoBusiness Observer - PinellasBusiness Observer - PolkBusiness Observer - SarasotaCalhoun-Liberty Journal, TheCaloosa BelleCape Coral BreezeCharlotte County Florida WeeklyChiefland CitizenCitrus County ChronicleCity of Auburndale - Polk CountyCity of Bartow - Polk CountyCity of Davenport - Polk CountyCity of Eagle Lake - Polk CountyCity of Fort Meade - Polk CountyCity of Frostproof - Polk CountyCity of Haines City - Polk CountyCity of Lake Alfred - Polk CountyCity of Lake Wales - Polk CountyCity of Lakeland - Polk CountyCity of Mulberry - Polk CountyCity of Polk City - Polk CountyCity of Winter Haven - Polk CountyClay TodayClermont SunCoastal Breeze NewsCounty Record, TheCreative Loafing TampaCrestview News BulletinDaily Commercial, TheDaily Sun, TheDaytona Beach News-Journal, TheDeSoto Sun WeeklyDestin Log, TheDiario Las AmericasDixie County AdvocateEagle, TheEl Nuevo HeraldEnglewood SunEscambia Sun-PressFernandina Beach News-LeaderFlorida Press Association TestFlorida Sentinel BulletinFlorida Sentry, TheFlorida Star, TheFlorida Sun, TheFlorida Times-Union, TheFlorida TodayFlorida WeeklyFort Myers Florida WeeklyFour Corners SunFree PressGabber Newspaper, TheGadsden County TimesGainesville Mainstreet Daily NewsGainesville Sun, TheGilchrist County HeraldGilchrist County JournalGraceville NewsGulf Breeze NewsHavana HeraldHavana Herald, TheHendry-Glades Sunday NewsHerald Advocate, TheHerald-TribuneHeritage Florida Jewish NewsHernando Sun, TheHighlands News-SunHolmes County Times-AdvertiserHometown NewsHometown News DelandHometown News DeltonaHometown News Fort PierceHometown News Martin CountyHometown News Media GroupHometown News MelbourneHometown News New Smyrna Beach/Edgewater/Oak HillHometown News North BrevardHometown News Ormond Beach/Daytona Beach/Holly HillHometown News Palm BayHometown News Port Orange/S. Daytona/Ponce InletHometown News Port St. LucieHometown News SebastianHometown News Suntree/Viera/RockledgeHometown News The BeachesHometown News Vero BeachIndian River Press JournalJackson County Floridan, MariannaJackson County TimesJacksonville Business JournalJacksonville Daily Record - Clay CountyJacksonville Daily Record - Duval CountyJacksonville Daily Record - Nassau CountyJacksonville Daily Record - St Johns CountyJefferson County JournalJupiter Courier, TheKey West CitizenKeys Weekly NewspapersLaGaceta NewspaperLake City ReporterLake Okeechobee NewsLake Region MonitorLake Worth Herald, TheLakeland SunLaker / Lutz News, TheLedger, TheLehigh Acres News StarLevy CitizenLongboat ObserverMadison County Carrier & Madison Enterprise-RecorderMiami Daily Business ReviewMiami Herald, TheMiami New TimesMiami TimesMiami TodayMiami's Community NewspapersMonticello NewsNaples Daily NewsNaples Florida WeeklyNaples Press, TheNassau County RecordNavarre PressNeves Media Apalachicola TimesNeves Media Holmes County Times AdvertiserNeves Media Port St. Joe StarNeves Media Washington County NewsNews Herald, TheNews-Press, TheNorth Lake OutpostNorth Port SunNorthwest Florida Daily News, Ft. WaltonOcala GazetteOcala Star-BannerOrlando AdvocateOrlando Business JournalOrlando SentinelOrlando TimesOrlando WeeklyOrmond Beach ObserverOsceola News-GazettePalatka Daily NewsPalm Beach Daily Business ReviewPalm Beach Daily NewsPalm Beach Post, ThePalm Coast News TribunePalm Coast ObserverPanama City News-HeraldPenny Saver Weekly NewsPensacola News JournalPerry News-Herald/Taco TimesPlant City ObserverPolk CountyPonte Vedra LeaderPonte Vedra RecorderPort Charlotte SunPort St. Joe StarPress JournalPunta Gorda SunquoinRiverbend NewsRiverland NewsSanford Herald, TheSanta Rosa Press-GazetteSarasota Herald-TribuneSarasota ObserverSeminole / Beach BeaconSouth Dade News LeaderSouth Florida Business JournalSouth Florida Sun-Sentinel, Ft. LauderdaleSt. Augustine Record, TheSt. Lucie News TribuneStar, TheStuart NewsSummation Weekly, TheSumter Sun TimesSuncoast News - PascoTallahassee AdvertiserTallahassee DemocratTampa Bay Business JournalTampa Bay NewspapersTampa Bay TimesTown of Dundee - Polk CountyTown of Hillcrest Heights - Polk CountyTown of Lake Hamilton - Polk CountyTrader Jake'sTriangle SunUnion County TimesVenice Gondolier Sun, TheVeteran VoiceVillage of Highlands Park - Polk CountyVillages Daily Sun, TheVoice of South MarionVolusia ReviewWakulla News, TheWakulla Sun, TheWashington County NewsWest Orange Times, TheWest Volusia Beacon, TheWinter Haven SunZephyrhills NewsNavigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.AlachuaBakerBayBradfordBrevardBrowardCalhounCharlotteCitrusClayCollierColumbiaDesotoDixieDuvalEscambiaFlaglerFranklinGadsdenGilchristGladesGulfHamiltonHardeeHendryHernandoHighlandsHillsboroughHolmesIndian RiverJacksonJeffersonLafayetteLakeLeeLeonLevyLibertyMadisonManateeMarionMartinMiami-DadeMonroeNassauOkaloosaOkeechobeeOrangeOsceolaPalm BeachPascoPinellasPolkPutnamSanta RosaSarasotaSeminoleSt JohnsSt LucieSumterSuwanneeTaylorUnionVolusiaWakullaWashingtonUpdateClearShowing 1 - 12 of 370 resultsSort by: NewestLaGaceta Newspaper TampaSeptember 25, 2026Keywords:legal adsMiscellaneous NoticesLaGaceta Newspaper TampaSeptember 25, 2026Keywords:legal adsMiscellaneous NoticesFlorida Today MelbourneSeptember 25, 2026NOTICE OF FORECLOSURE SALE",
+      "publication_date": "",
+      "subcategory": "",
+      "county": "Orange",
+      "scraped_date": "2026-09-25"
     }
   ]
 }
